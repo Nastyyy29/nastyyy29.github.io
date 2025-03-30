@@ -35,8 +35,8 @@ $(document).ready(function () {
     const formData = {
       datalist: $("#datalist").val(),
       email: $("#email").val(),
-      checkbox1: $("#inputForm input[name='checkbox1']").is(":checked"),
-      checkbox2: $("#inputForm input[name='checkbox2']").is(":checked"),
+      checkbox1: $("#checkbox1").is(":checked"),
+      checkbox2: $("#checkbox2").is(":checked"),
     };
 
     console.log("Сохраняемые данные:", formData);
@@ -146,7 +146,7 @@ $(document).ready(function () {
     console.log("Checkbox2:", data.checkbox2, "->", checkbox2Checked);
 
     // Устанавливаем чекбоксы точно как они были сохранены
-    $("#displayForm input[name='checkbox1']").prop("checked", checkbox1Checked);
-    $("#displayForm input[name='checkbox2']").prop("checked", checkbox2Checked);
+    $("#checkbox1_display").prop("checked", checkbox1Checked);
+    $("#checkbox2_display").prop("checked", checkbox2Checked);
   }
 });
